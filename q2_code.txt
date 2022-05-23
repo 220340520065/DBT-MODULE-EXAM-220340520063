@@ -1,0 +1,35 @@
+use kothali;
+create table Emp
+(
+empno int(4),
+ename varchar(10),
+job varchar(9),
+hiredate date,
+sal float(7,2),
+comm float(7,2),
+deptno int(2));
+insert into Emp values(7839,' KING',' MANAGER','1991-11-17',5000 ,NULL ,10);
+insert into Emp values(7698, 'BLAKE' ,'CLERK', '1981-05-01', 2850, NULL, 30);
+insert into Emp values(7782, 'CLARK','MANAGER', '1981-06-09', 2450,NULL, 10);
+insert into Emp values(7566,'JONES', 'CLERK', '1981-04-02', 2975, NULL, 20);
+insert into Emp values(7654, 'MARTIN', 'SALESMAN', '1981-09-28', 1250, 1400 ,30);
+insert into Emp values(7499, 'ALLEN',' SALESMAN', '1981-02-20', 1600, 300, 30);
+select * from Emp;
+
+select * from Emp where sal between 2500 and 5000;
+select ename from Emp order by ename desc;
+select lower(job) from Emp;
+select ename,length(ename) from Emp;
+select deptno,count(*) from Emp group by deptno;
+select ename from Emp where ename like '%AR%';
+select sal,sal*0.2 HRA from Emp;
+
+
+
+
+
+
+
+
+
+
